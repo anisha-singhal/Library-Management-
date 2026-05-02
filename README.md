@@ -70,13 +70,16 @@ src/test/java/com/bits/library/
   service/       (AuthorServiceTest, BookServiceTest — Mockito)
 ```
 
+## Prerequisites
+
+- Java 17 or higher (tested on Java 21)
+- Apache Maven 3.6+
+
 ## Running
 
 ```bash
 # from the project root
-./mvnw spring-boot:run
-# or, on Windows
-mvnw.cmd spring-boot:run
+mvn spring-boot:run
 ```
 
 Then open:
@@ -100,7 +103,7 @@ Then open:
 ## Tests
 
 ```bash
-./mvnw test
+mvn test
 ```
 
 - `BookRepositoryTest` and `AuthorRepositoryTest` use `@DataJpaTest` and the in-memory H2 to verify the inner-join query and unique-constraint helpers.
